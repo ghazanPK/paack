@@ -7,6 +7,13 @@ export const metadata: Metadata = {
   description: "The premier organization for the Pakistani academic and professional community in South Korea. Connecting minds, empowering futures.",
   keywords: "PAACK, Pakistani, Korea, academic, community, professionals, doctors, researchers",
   authors: [{ name: "PAACK Organization" }],
+  icons: {
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/favicon.ico", sizes: "any" }
+    ],
+    apple: "/apple-touch-icon.png",
+  },
   openGraph: {
     title: "PAACK | Pakistani Academic Community Korea",
     description: "The premier organization for the Pakistani academic and professional community in South Korea.",

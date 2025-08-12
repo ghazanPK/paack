@@ -1,0 +1,9 @@
+<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+  <!-- Simplified Graduation Cap for 32x32 favicon -->
+  <rect width="32" height="32" fill="#ffffff"/>
+  <g transform="translate(4, 8)">
+    <path d="M0 8 L12 13 L24 8 L12 3 Z" fill="#0d2c54"/>
+    <path d="M3 9 L3 16 C3 16 6 17 12 17 C18 17 21 16 21 16 L21 9 L12 15 Z" fill="#0d2c54"/>
+    <path d="M21 9 L21 16 L24 16 L24 9 Z" fill="#006a4e"/>
+  </g>
+</svg>
