@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import Button from '../ui/Button';
+import Link from 'next/link';
 
 export default function MissionSection() {
   return (
@@ -22,7 +22,7 @@ export default function MissionSection() {
               the professional success and social well-being of our members, enabling 
               them to thrive in Korea.
             </p>
-            <Button href="/about">Learn More About Us</Button>
+            <Link href="/about" className="btn">Learn More About Us</Link>
           </div>
           
           <div className="flex-1 relative">
