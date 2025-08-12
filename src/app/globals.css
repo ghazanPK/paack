@@ -25,6 +25,7 @@ h3 { font-size: 1.4rem; }
 p { margin-bottom: 15px; max-width: 65ch; }
 a { text-decoration: none; color: var(--secondary-color); transition: color 0.3s ease; }
 img { max-width: 100%; display: block; border-radius: 8px; }
+.flags img{border-radius: 0px;}
 
 .btn { display: inline-block; padding: 14px 28px; background: var(--secondary-color); color: var(--white-color); border-radius: 50px; font-weight: 600; transition: all 0.3s ease; border: 2px solid transparent; cursor: pointer; text-transform: uppercase; letter-spacing: 0.5px; }
 .btn:hover { transform: translateY(-3px); box-shadow: 0 4px 15px rgba(0,106,78,0.3); }

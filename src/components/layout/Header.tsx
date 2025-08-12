@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 
 interface DropdownItem {
@@ -135,8 +136,8 @@ export default function Header() {
 
         <div className="header-right">
           <div className="flags">
-            <span>🇵🇰</span>
-            <span>🇰🇷</span>
+            <Image src="/flags/pk.svg" alt="Pakistan flag" width={24} height={16} />
+            <Image src="/flags/kr.svg" alt="Korea flag" width={24} height={16} />
           </div>
           <button
             className="menu-toggle"
