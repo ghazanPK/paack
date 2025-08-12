@@ -1,103 +1,141 @@
-import Image from "next/image";
+import React from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
+import Header from '@/components/layout/Header';
+import Footer from '@/components/layout/Footer';
+import FadeInSection from '@/components/ui/FadeInSection';
+import PageHero from '@/components/ui/PageHero';
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
+    <>
+      <Header />
+      <main>
+        <PageHero 
+          title="Connecting Minds, Empowering Futures."
+          subtitle="The premier organization for the Pakistani academic and professional community in South Korea."
+          isHomePage={true}
+          buttonText="Become a Member"
+          buttonLink="/get-involved"
+          buttonStyle="accent"
         />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
+        <FadeInSection>
+          <section id="mission">
+            <div className="container">
+              <div className="mission-text">
+                <h2>Our Mission</h2>
+                <p>
+                  The mission of the Pakistani Academic Community Korea (PAACK)
+                  is to build a vibrant and supportive network for Pakistani
+                  doctors, researchers, and students in South Korea. We are
+                  dedicated to empowering our community by addressing critical
+                  social and academic challenges.
+                </p>
+                <p>
+                  Through collaboration, resource sharing, and advocacy, we aim
+                  to enhance the professional success and social well-being of
+                  our members, enabling them to thrive in Korea.
+                </p>
+                <Link href="/about" className="btn">
+                  Learn More About Us
+                </Link>
+              </div>
+              <div className="mission-image">
+                <Image
+                  src="/images/mission-image.jpeg"
+                  alt="A diverse group of professionals collaborating"
+                  width={600}
+                  height={400}
+                />
+              </div>
+            </div>
+          </section>
+        </FadeInSection>
+
+        <FadeInSection>
+          <section id="pillars">
+            <div className="container">
+              <h2>What We Do</h2>
+              <div className="pillars-grid">
+                <div className="pillar-card">
+                  <div className="icon">&#128188;</div>
+                  <h3>Career Development</h3>
+                  <p>
+                    Providing resources, mentorship, and opportunities to
+                    navigate the Korean job market and advance your career.
+                  </p>
+                </div>
+                <div className="pillar-card">
+                  <div className="icon">&#128279;</div>
+                  <h3>Research & Collaboration</h3>
+                  <p>
+                    Fostering a network to connect researchers, share projects,
+                    and promote academic collaboration across various fields.
+                  </p>
+                </div>
+                <div className="pillar-card">
+                  <div className="icon">&#128101;</div>
+                  <h3>Community & Support</h3>
+                  <p>
+                    Offering support on visa, employment, family integration,
+                    and other social challenges faced by the diaspora.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+        </FadeInSection>
+
+        <FadeInSection>
+          <section id="event">
+            <div className="container">
+              <div className="event-container">
+                <div className="event-details">
+                  <span className="event-tag">HAPPENING SOON!</span>
+                  <h2>Upcoming Event</h2>
+                  <h3>
+                    One-Day Conference on Doctors’ Social and Academic Challenges
+                  </h3>
+                  <ul>
+                    <li>
+                      <strong>Date:</strong> August 15, 2025
+                    </li>
+                    <li>
+                      <strong>Time:</strong> 4:00 PM - 7:00 PM
+                    </li>
+                    <li>
+                      <strong>Venue:</strong> Changwon University
+                    </li>
+                  </ul>
+                </div>
+                <div className="event-cta">
+                  <Link href="/events" className="btn btn-accent">
+                    Register Now
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </section>
+        </FadeInSection>
+
+        <FadeInSection>
+          <section id="join" style={{ backgroundColor: 'var(--light-gray)', textAlign: 'center' }}>
+            <div className="container">
+              <h2>Join Our Thriving Community</h2>
+              <p style={{ marginLeft: 'auto', marginRight: 'auto' }}>
+                Become a member of PAACK to access exclusive resources, connect
+                with peers and mentors, and contribute to a growing network of
+                Pakistani professionals in Korea.
+              </p>
+              <Link href="/get-involved" className="btn">
+                Sign Up for Membership
+              </Link>
+            </div>
+          </section>
+        </FadeInSection>
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      <Footer />
+    </>
   );
 }
