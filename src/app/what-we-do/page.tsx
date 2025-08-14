@@ -1,11 +1,6 @@
-import React from 'react';
-import ComingSoonPage from '@/components/ui/ComingSoonPage';
+import { redirect } from 'next/navigation';
 
-export default function WhatWeDo() {
-  return (
-    <ComingSoonPage 
-      title="What We Do"
-      subtitle="Explore PAACK's comprehensive initiatives to support and advocate for our community."
-    />
-  );
+export default function WhatWeDoRedirect() {
+  // Legacy route - redirect to new /initiatives
+  redirect('/initiatives');
 }

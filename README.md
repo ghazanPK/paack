@@ -9,46 +9,45 @@ PAACK (Pakistani Academic Community Korea) is dedicated to building a vibrant an
 ## 🚀 Features
 
 - **Responsive Design**: Mobile-first approach with modern UI/UX
-- **Modular Architecture**: Clean, reusable components
-- **Scroll Animations**: Smooth fade-in effects for better user experience
+- **Modular Architecture**: Clean, reusable components with TypeScript interfaces
+- **Scroll Animations**: Smooth fade-in effects and custom CSS transitions
 - **Modern Navigation**: Desktop and mobile-friendly navigation with dropdowns
 - **SEO Optimized**: Proper metadata and semantic HTML structure
+- **Interactive Portal**: Complete members-only section with dynamic content
+- **Real-Time Search**: Advanced filtering and search functionality
+- **Professional Profiles**: Detailed member profiles with expertise and affiliations
+- **Official Team Structure**: Real PAACK cabinet data with proper documentation
 
 ## 🛠️ Tech Stack
 
-- **Framework**: Next.js 15.4.6
+- **Framework**: Next.js 15 with App Router
 - **Language**: TypeScript
-- **Styling**: Tailwind CSS 4
+- **Styling**: CSS-in-JS (styled-jsx) + CSS Custom Properties
 - **Font**: Inter (Google Fonts)
 - **Icons**: Unicode emojis for cross-platform compatibility
+- **State Management**: React Hooks (useState, useEffect)
+- **Animations**: Custom CSS transitions and scroll animations
 
 ## 📁 Project Structure
 
 ```
 src/
-├── app/                    # Next.js app router pages
-│   ├── about/             # About pages
-│   ├── contact/           # Contact page
-│   ├── events/            # Events pages
-│   ├── get-involved/      # Get involved pages
-│   ├── news/              # News pages
-│   ├── globals.css        # Global styles
-│   ├── layout.tsx         # Root layout
-│   └── page.tsx           # Home page
-├── components/            # Reusable components
-│   ├── layout/           # Layout components
-│   │   ├── Header.tsx    # Navigation header
-│   │   └── Footer.tsx    # Site footer
-│   ├── sections/         # Page sections
-│   │   ├── HeroSection.tsx
-│   │   ├── MissionSection.tsx
-│   │   ├── PillarsSection.tsx
-│   │   ├── EventSection.tsx
-│   │   └── JoinSection.tsx
-│   └── ui/               # UI components
-│       └── Button.tsx    # Reusable button component
-└── hooks/                # Custom React hooks
-    └── useScrollAnimation.ts
+├── components/             # Reusable React components
+│   ├── layout/             # Layout components (Header, Footer, etc.)
+│   ├── sections/           # Page section components
+│   └── ui/                 # UI components (buttons, modals, etc.)
+├── hooks/                  # Custom React hooks
+└── app/                    # Next.js app router pages
+│   ├── about/              # About pages
+│   ├── initiatives/        # Initiatives pages (formerly "what-we-do")
+│   ├── get-involved/       # Get involved pages
+│   ├── portal/             # Members-only portal (phase 2)
+│   ├── resources/          # Public resources
+│   ├── events/             # Events pages
+│   ├── news/               # News pages
+│   ├── globals.css         # Global styles
+│   ├── layout.tsx          # Root layout
+│   └── page.tsx            # Home page
 ```
 
 ## 🎨 Design System
@@ -59,10 +58,6 @@ src/
 - **Accent**: `#fca311` (Vibrant Orange)
 - **Light Gray**: `#f4f7f5`
 - **Dark Gray**: `#333333`
-
-### Typography
-- **Font Family**: Inter
-- **Font Weights**: 400, 600, 700, 800
 
 ## 🚦 Getting Started
 
@@ -86,60 +81,80 @@ src/
    npm start
    ```
 
-## 📱 Responsive Breakpoints
-
-- **Mobile**: < 768px
-- **Tablet**: 768px - 1024px
-- **Desktop**: > 1024px
-
 ## 🔗 Navigation Structure
 
 - **About Us**
-  - Our Mission & Vision
-  - Our Team
-  - Our History
-- **What We Do**
-  - Advocacy & Support
-  - Research & Collaboration
-  - Career Development
-- **Events**
-- **News**
-- **Get Involved**
-  - Become a Member
-  - Partner With Us
-  - Volunteer
-- **Contact**
+  - Our Mission & Vision (`/about/mission`)
+  - Our Team (`/about/team`)
+  - Our History (`/about/history`)
+- **Initiatives** (`/initiatives`)
+  - Advocacy & Support (`/initiatives/advocacy`)
+  - Research & Collaboration (`/initiatives/research`)
+  - Career Development (`/initiatives/careers`)
+  - Community & Family Support (`/initiatives/community`)
+- **Events** (`/events`)
+- **Resources** (`/resources`)
+- **News** (`/news`)
+- **Get Involved** (`/get-involved`)
+  - Become a Member (`/get-involved/membership`)
+  - Partner With Us (`/get-involved/partner`)
+  - Volunteer (`/get-involved/volunteer`)
+- **Contact** (`/contact`)
 
-## 📄 Pages
+## 📄 Pages Status
 
-- **Home** (`/`): Landing page with hero, mission, pillars, events, and join sections
-- **About** (`/about`): About PAACK organization
-- **Events** (`/events`): Upcoming and past events
-- **News** (`/news`): Latest news and updates
-- **Get Involved** (`/get-involved`): Ways to participate
-- **Contact** (`/contact`): Contact information and form
+### ✅ Completed (Phase 1)
+- **Home** (`/`) - Full landing page with hero, mission, pillars, events, and join sections
+- **About Section** (`/about`) - Complete with enhanced content
+  - `/about/mission` - Comprehensive mission, vision, values, and strategic goals
+  - `/about/team` - Official PAACK cabinet members (Reference: PAACK/3S/2025.07.22)
+  - `/about/history` - Detailed timeline and achievements
+- **Contact** (`/contact`) - Contact information and form
 
-## 🎯 Features Implemented
+### 🚧 In Progress / Coming Soon (Phase 1)
+- **Initiatives** (`/initiatives`)
+  - `/initiatives/advocacy`, `/initiatives/research`, `/initiatives/careers`, `/initiatives/community`
+- **Events** (`/events`)
+- **Resources** (`/resources`)
+- **News** (`/news`)
+- **Get Involved** (`/get-involved`)
+  - `/get-involved/membership`, `/get-involved/partner`, `/get-involved/volunteer`
 
-- ✅ Responsive header with mobile menu
-- ✅ Smooth scroll animations
-- ✅ Modular component architecture
-- ✅ TypeScript for type safety
-- ✅ SEO-friendly structure
-- ✅ Modern CSS with Tailwind
-- ✅ Accessible navigation
-- ✅ Professional design system
+### ✅ Completed (Phase 2 - Members Portal)
+- **Dashboard** (`/portal/dashboard`) - Activity feeds, quick stats, recent connections
+- **Member Directory** (`/portal/directory`) - 12 diverse member profiles with search/filter
+- **Member Profiles** (`/portal/profile/[username]`) - Dynamic routing with detailed profiles
+- **Collaboration Hub** (`/portal/collaborate`) - Project management and expert consultation
+  - `/portal/collaborate/project-board` - Active projects and collaboration tools
+  - `/portal/collaborate/find-expert` - Expert search and consultation requests
+- **Research & Resources** (`/portal/resources`) - Publications, funding, events
+  - `/portal/resources/publications` - Academic papers and research
+  - `/portal/resources/funding` - Grant opportunities and financial support
+  - `/portal/resources/calendar` - Academic and community events
+- **Community Hub** (`/portal/community`) - Forums, jobs, mentorship
+  - `/portal/community/forums` - Discussion boards and community interaction
+  - `/portal/community/jobs` - Job board and career opportunities
+  - `/portal/community/mentorship` - Mentorship program and connections
 
-## 🔮 Future Enhancements
+## 🎯 Recent Updates
 
-- [ ] Contact form functionality
-- [ ] Newsletter subscription
-- [ ] Member portal
-- [ ] Event registration system
-- [ ] Blog/CMS integration
-- [ ] Multi-language support (Korean/English)
-- [ ] Social media integration
-- [ ] Member directory
+### Phase 2 Portal Implementation (Completed)
+- ✅ **Full Members Portal**: Complete implementation of all 6 major portal sections
+- ✅ **Diverse Member Profiles**: 12 detailed member profiles representing various academic fields
+- ✅ **Interactive Features**: Search, filter, tab navigation, dynamic routing
+- ✅ **Professional Design**: Modern UI with hover effects, gradients, and responsive layouts
+
+### About Section Enhancement (Completed)
+- ✅ **Official Team Data**: Real PAACK cabinet members (Reference: PAACK/3S/2025.07.22)
+- ✅ **Comprehensive Mission Page**: Core values, strategic goals, and organizational vision
+- ✅ **Interactive History Timeline**: 8 major milestones from 2018-2025
+- ✅ **Enhanced Main About Page**: Statistics, services, and call-to-action sections
+
+### Technical Improvements
+- ✅ **Next.js 15 App Router**: Modern routing and server/client component architecture
+- ✅ **TypeScript Integration**: Full type safety with interfaces and proper error handling
+- ✅ **Client-Side Interactivity**: React hooks for state management and user interactions
+- ✅ **Responsive Design**: Mobile-first approach with breakpoint-specific styling
 
 ## 🤝 Contributing
 

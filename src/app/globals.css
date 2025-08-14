@@ -14,7 +14,8 @@
 html { scroll-behavior: smooth; }
 body { font-family: var(--font-family); line-height: 1.7; color: var(--dark-gray); background: var(--white-color); }
 
-.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+/* Widen content area globally to give header more room */
+.container { max-width: 1400px; margin: 0 auto; padding: 0 28px; }
 section { padding: 100px 0; overflow: hidden; }
 
 h1, h2, h3 { font-weight: 800; color: var(--primary-color); margin-bottom: 20px; line-height: 1.2; }
@@ -63,12 +64,12 @@ img { max-width: 100%; display: block; border-radius: 8px; }
 .main-header:not(.scrolled) .main-nav ul li a { color: var(--white-color); }
 .main-header.scrolled .logo { color: var(--primary-color); }
 .main-header:not(.scrolled) .logo { color: var(--white-color); }
-.header-right { display: flex; align-items: center; gap: 25px; }
+.header-right { display: flex; align-items: center; gap: 18px; }
 .flags { display: flex; gap: 8px; }
 .flags span { font-size: 1.5rem; }
 
 .main-nav ul { display: flex; list-style: none; align-items: center; }
-.main-nav ul li { margin-left: 30px; position: relative; }
+.main-nav ul li { margin-left: 20px; position: relative; }
 .main-nav ul li a { font-weight: 600; padding: 10px 0; border-bottom: 2px solid transparent; }
 .main-header:not(.scrolled) .main-nav ul li a { color: var(--white-color); }
 .main-header.scrolled .main-nav ul li a { color: var(--primary-color); }

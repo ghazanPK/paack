@@ -37,10 +37,16 @@ const Footer: React.FC = () => {
                 <Link href="/about">About Us</Link>
               </li>
               <li>
+                <Link href="/initiatives">Initiatives</Link>
+              </li>
+              <li>
                 <Link href="/events">Events</Link>
               </li>
               <li>
                 <Link href="/news">News</Link>
+              </li>
+              <li>
+                <Link href="/resources">Resources</Link>
               </li>
             </ul>
           </div>
@@ -48,10 +54,36 @@ const Footer: React.FC = () => {
             <h4>Get Involved</h4>
             <ul>
               <li>
-                <Link href="/get-involved">Membership</Link>
+                <Link href="/get-involved/membership">Membership</Link>
+              </li>
+              <li>
+                <Link href="/get-involved/partner">Partner With Us</Link>
+              </li>
+              <li>
+                <Link href="/get-involved/volunteer">Volunteer</Link>
               </li>
               <li>
                 <Link href="/contact">Contact</Link>
+              </li>
+            </ul>
+          </div>
+          <div className="footer-col">
+            <h4>Portal</h4>
+            <ul>
+              <li>
+                <Link href="/portal/dashboard">Dashboard</Link>
+              </li>
+              <li>
+                <Link href="/portal/directory">Member Directory</Link>
+              </li>
+              <li>
+                <Link href="/portal/collaborate">Collaboration Hub</Link>
+              </li>
+              <li>
+                <Link href="/portal/resources">Member Resources</Link>
+              </li>
+              <li>
+                <Link href="/portal/community">Community Hub</Link>
               </li>
             </ul>
           </div>

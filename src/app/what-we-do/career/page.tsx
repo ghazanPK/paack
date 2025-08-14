@@ -1,11 +1,5 @@
-import React from 'react';
-import ComingSoonPage from '@/components/ui/ComingSoonPage';
+import { redirect } from 'next/navigation';
 
-export default function Career() {
-  return (
-    <ComingSoonPage 
-      title="Career Services"
-      subtitle="Explore our career development programs and opportunities for professional growth."
-    />
-  );
+export default function CareerRedirect() {
+  redirect('/initiatives/careers');
 }
